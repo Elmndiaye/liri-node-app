@@ -78,17 +78,18 @@ function tweetz(){
     });    
 }
 function does (){
-    fs.readFile("do-what-it-says", "utf8", function(error, data) {
+    fs.readFile("./random.txt", "utf8", function(error, data) {
 
         if (error) {
             return console.log(error);
         }
         console.log(data);
-
         var dataArr = data.split(",");
-    
         console.log(dataArr);
     
+        // use random.txt data to become commands in terminal
+        // Run "spotify-this-song" to find "I want it that way" in terminal
+
     });
 
 }
