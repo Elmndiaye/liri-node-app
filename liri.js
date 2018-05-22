@@ -11,7 +11,7 @@ var action = process.argv[2];
 var value = process.argv[3];
 
 switch (action) {
-case "song":
+case "spotify-this-song":
 song();
 break;
 case "movie-this":
@@ -83,13 +83,21 @@ function does (){
         if (error) {
             return console.log(error);
         }
-        console.log(data);
         var dataArr = data.split(",");
-        console.log(dataArr);
-    
-        // use random.txt data to become commands in terminal
-        // Run "spotify-this-song" to find "I want it that way" in terminal
+        var command = dataArr[0]
+        var query = dataArr[1];
 
+if (command==="spotify-this-song")  {  
+  value = query;
+  song();
+
+} else if (command==="movie-this") {
+    value = query
+    movie-this ();
+} 
+else {
+    console.log("nothing was there!");
+}
+        //console.log(dataArr);
     });
-
 }
